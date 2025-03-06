@@ -6,7 +6,6 @@
 }
 
 .sp-attachment-row {
-    overflow: hidden;
     width: 100%;
     margin: 5px 0;
     border-bottom: 1px solid #ccc;
@@ -23,9 +22,9 @@
 .order-attachment-content audio { width: 100%; }
 .order-attachment-content textarea { width: 80%;  padding: 10px; }
 .sp-attachment-row .order-attachment-preview {
-    width: 25%;
-    display: table-cell;
-    height: 150px;
+    width: fit-content;
+    display: block;
+    height: 50px;
     margin: 10px;
     text-align: center;
 }
@@ -39,9 +38,12 @@
     height: 64px;
     margin: 15px auto;
 }
-.sp-attachment-row-content { display: table; width: 100%; }
+.sp-attachment-row-content { 
+    display: flex;
+    align-items: center;
+    width: 100%; 
+}
 .sp-attachment-row .order-attachment-content {
-    width: 70%;
     display: table-cell;
     vertical-align: top;
     padding: 0 10px;

@@ -1,0 +1,100 @@
+.account.orderattachment-view-attachment {
+    .sp-attachment-download {
+        background-image: none;
+    }
+
+    .sp-attachment-row-content {
+        width: fit-content;
+    }
+
+    .order-attachment-preview {
+        width: fit-content;
+    }
+
+    .sp-attachment-row {
+        margin: 0px;
+
+        .order-attachment-content {
+            display: flex;
+            align-items: flex-end;
+            padding: 0px;
+
+            .sp-attachment-download {
+                margin-left: 0px;
+            }
+        }
+    }
+
+    .payment-option-inner {
+        .control {
+            display: flex;
+        }
+
+        .url-open-img {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .attachment-container {
+        display: flex;
+        gap: 10px 0px;
+        flex-direction: column;
+
+        .wrapper-attachment-container {
+            display: flex;
+            align-items: center;
+            gap: 0px 20px;
+        }
+
+        figure {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .url-open-img {
+            .btn_und();
+            width: inherit;
+            overflow: initial;
+
+            img {
+                max-width: fit-content;
+            }
+        }
+
+        figure {
+            width: 100%;
+
+            img {
+                max-width: fit-content;
+            }
+
+            figcaption {
+                font-size: 13px;
+                font-weight: bolder;
+            }
+        }
+
+        a {
+            width: 100%;
+        }
+
+        .order-attachment-preview {
+            display: none;
+        }
+        .sp-attachment-row-content {
+            width: fit-content;
+        }
+    }
+
+    .sp-attachment-row {
+        border: none;
+    }
+
+    .block.block-order-details-view {
+        display: none;
+    }
+}

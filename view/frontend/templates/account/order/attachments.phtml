@@ -1,6 +1,5 @@
 <?php if ($this->isOrderAttachmentEnabled()) : ?>
 
-
 <div data-bind="scope: 'Orderattachment'">
                 <!-- ko template: getTemplate() --><!-- /ko -->
 </div>
@@ -11,8 +10,10 @@
                 "Magento_Ui/js/core/app": {
                     "components": {
                         "Orderattachment": {
-                            "component": "Sp_Orderattachment/js/attachment",
-                             "dataconfig": <?= $this->getAttachmentConfig() ?>
+                            "component": "Sp_Orderattachment/js/account-attachment",
+                            "dataconfig": <?= $this->getAttachmentConfig() ?>,
+                            "urlPDFImage": "<?php echo $this->getViewFileUrl('Sp_Orderattachment::images/pdf-icon.png'); ?>",
+                            "urlOpenImage": "<?php echo $this->getViewFileUrl('Sp_Orderattachment::images/open-icon.png'); ?>"
                         }
                     }
                 }

@@ -1,0 +1,48 @@
+<div class="sp-checkout-orderattachment" >
+    <div class="payment-option _collapsible opc-payment-additional order-attachments">
+        <div class="payment-option-content" >
+                <div class="payment-option-inner">
+                    <div class="field">
+                        <div class="info" data-bind="html: getAttachmentInfo()"></div>
+                        <div class="control">
+                            <input class="input"
+                                   type="file"
+                                   style="display: none;"
+                                   data-bind="event: {change: fileUpload}" 
+                                   id="order-attachment"
+                                   name="order-attachment[]" />
+                            <!-- <div data-bind="text: myTimer"></div> -->
+                            
+                            <div class="attachment-container" data-bind="foreach:attachmentList">
+                                <div class="wrapper-attachment-container" >
+                                    <figure>
+                                        <img class="thumbnail" data-bind="attr: { src: $parent.urlPDFImg() }">
+                                        <figcaption data-bind="text: comment" >Nota Fiscal</figcaption>
+                                    </figure>
+                                    <div>
+                                        <a class="url-open-img" href="#" data-bind="click: function() { window.open(url, '_blank'); }">
+                                            Visualizar
+                                        </a>
+                                    </div>
+                                    <div data-bind="attr: { rel: hash, class:'sp-attachment-row attach-'+hash}">
+                                        <div class="sp-attachment-row-content">
+                                            <div class="order-attachment-preview">
+                                                <div class="attachment-file">
+                                                <div class="filename" data-bind="text: path"></div>
+                                                </div>
+                                            </div>
+                                            <div class="order-attachment-content">
+                                            <a id="sp-attachment-download1" class="sp-attachment-download" title="Download Item" data-bind="click: $parent.downloadFile" href="#">Download</a>
+                                            <input type="hidden" data-bind="attr: { value: attachment_id, class: attachment_class}" name="attachment-id" >
+                                            <input type="hidden" name="attachment-hash"  data-bind="attr: { value: hash, class: hash_class}" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

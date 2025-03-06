@@ -8,7 +8,7 @@ define(
         'use strict';
         return Component.extend({
             defaults: {
-                template: 'Sp_Orderattachment/attachment-markup'
+                template: 'Sp_Orderattachment/account-attachment-markup'
             },
             attachmentList: ko.observableArray([]),
             urlPDFImg: ko.observable(),
@@ -32,10 +32,10 @@ define(
                 this.removeUrl = this.attachementData.spAttachmentRemove;
                 this.comment = this.attachementData.spAttachmentComment;
                 this.attachments = this.attachementData.attachments;
-                this.attachmentTitle = this.attachementData.spAttachmentTitle;
-                this.attachmentInfromation = this.attachementData.spAttachmentInfromation;
                 this.urlPDFImg(this.urlPDFImage);
                 this.urlOpenImg(this.urlOpenImage);
+                this.attachmentTitle = this.attachementData.spAttachmentTitle;
+                this.attachmentInfromation = this.attachementData.spAttachmentInfromation;
 
                 this.attachmentList(this.attachments);
                 this.files = this.attachementData.totalCount;
